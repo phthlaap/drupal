@@ -1,0 +1,42 @@
+<?php
+
+// use Drupal\Core\Form\FormStateInterface;
+
+// /**
+//  * Implements hook_theme_suggestions_alter
+//  */
+// function subscribe_theme_suggestions_alter(array &$suggestions, array $variables) {
+
+//     if (isset($variables['element']) && isset($variables['element']['#type']) && $variables['element']['#type'] == 'form') {
+//         $original_theme_hook = $variables['theme_hook_original'];
+
+//         $suggestions[] = $original_theme_hook . '__' . str_replace('-', '_', $variables['element']['#id']);
+//     }
+
+//     return $suggestions;
+
+// }
+
+// /**
+//  * Implements hook_form_alter()
+//  */    
+// function subscribe_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+//     if ($form_id == 'ex81_subscribe_form') {
+
+//       $form['#theme'] = ['subscribe'];
+
+//     }
+
+// }
+
+/**
+ * Implements hook_theme()
+ */
+// function subscribe_theme($existing, $type, $theme, $path) {
+//     return [
+//       'subscribe' => [
+//         'render element' => 'form',
+//       ],
+//     ];
+// }

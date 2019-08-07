@@ -1,0 +1,7 @@
+name: Subscribe 
+description: 'Subscribe at footer block'
+type: module
+package: Custom
+core: 8.x
+version: VERSION
+configure: admin.subscribe.cms

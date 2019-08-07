@@ -1,0 +1,42 @@
+<?php
+
+/**
+* Implements hook_schema().
+*
+* Defines the database tables used by this module.
+*
+* @see hook_schema()
+*
+* @ingroup subscribe
+*/
+  function subscribe_schema() {
+    $schema['mpire_subscribe'] = array(
+      'description' => 'Stores example person entries for demonstration purposes.',
+      'fields' => array(
+        'id' => array(
+          'type' => 'serial',
+          'not null' => TRUE,
+          'description' => 'Primary Key: Unique person ID.'
+        ),
+        'email' => array(
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'default' => '',
+          'description' => 'Email of the person.'
+        ),
+        'creation_date' => array(
+          'type' => 'int',
+          'not null' => TRUE,
+          'default' => 0,
+        )
+      ),
+      'primary key' => array('id'),
+        'indexes' => array(
+        'email' => array('email'),
+        'creation_date' => array('creation_date'),
+        ),
+    );
+    
+    return $schema;
+  }

@@ -1,0 +1,7 @@
+admin.subscribe.cms:
+  path: '/admin/management/mpire_subscribe'
+  defaults:
+    _controller: 'Drupal\subscribe\Controller\Subscribe::list'
+    _title: 'Management Subscribe'
+  requirements:
+    _permission: 'access content'
